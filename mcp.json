@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "algobharat-crossborder-remit-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Algorand",
+        "PROJECT_TICKER": "ABREMIT"
+      },
+      "tools": [
+        {
+          "name": "verify_abremit_invariants",
+          "description": "Verifies deterministic invariants for AlgoBharat Cross-Border Remit AI on Algorand."
+        },
+        {
+          "name": "execute_abremit_action",
+          "description": "Executes authenticated Payments state transition."
+        }
+      ]
+    }
+  }
+}
